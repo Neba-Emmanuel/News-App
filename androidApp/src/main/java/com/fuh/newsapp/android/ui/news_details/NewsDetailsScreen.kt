@@ -25,9 +25,9 @@ import com.google.accompanist.web.WebView
 import com.google.accompanist.web.WebViewState
 import com.google.accompanist.web.rememberWebViewState
 import com.fuh.newsapp.android.R
-import com.fuh.newsapp.android.ui.components.KmmNewsAPPDialog
-import com.fuh.newsapp.android.ui.components.KmmNewsAPPTopBar
-import com.fuh.newsapp.android.ui.theme.KMMNewsTheme
+import com.fuh.newsapp.android.ui.components.APPDialog
+import com.fuh.newsapp.android.ui.components.NewsAPPTopBar
+import com.fuh.newsapp.android.ui.theme.NewsAppTheme
 import com.fuh.newsapp.domain.domain_model.HeadlineDomainModel
 import com.fuh.newsapp.presentation.newdetails.NewsDetailsScreenEvent
 import com.fuh.newsapp.presentation.newdetails.NewsDetailsScreenState
@@ -56,7 +56,7 @@ fun NewsDetailsScreen(
     val scope = rememberCoroutineScope()
 
     Scaffold(topBar = {
-        KmmNewsAPPTopBar(titleRes = R.string.news_details, navigationIcon = {
+        NewsAPPTopBar(titleRes = R.string.news_details, navigationIcon = {
             IconButton(onClick = { destinationsNavigator.popBackStack() }) {
 
                 Icon(
@@ -102,7 +102,7 @@ fun NewsDetailsScreen(
 
             }
             NewsDetailsScreenState.SavingForLater -> {
-                KmmNewsAPPDialog(
+                APPDialog(
                     text = stringResource(id = R.string.adding_to_read_later),
                     dialogState = dialogState
                 ) {
@@ -201,7 +201,7 @@ fun LazyListScope.headlineHeader(headline: HeadlineDomainModel, webviewState: We
 @Preview
 @Composable
 fun NewsDetailScreenAppBarPreview() {
-    KMMNewsTheme() {
+    NewsAppTheme() {
         // NewsDetails(HeadlineDomainModel())
     }
 
