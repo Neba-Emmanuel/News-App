@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.fuh.newsapp.android.R
-import com.fuh.newsapp.android.ui.components.KmmNewsAPPTopBar
+import com.fuh.newsapp.android.ui.components.NewsAPPTopBar
 import com.fuh.newsapp.android.ui.home.headlines
 import com.fuh.newsapp.android.ui.home.placeholder
 import com.fuh.newsapp.presentation.readlater.ReadLaterState
@@ -39,7 +39,7 @@ fun ReadLaterScreen(
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 private fun ReadLaterBody(state: ReadLaterState, destinationsNavigator: DestinationsNavigator) {
     Scaffold(modifier = Modifier.fillMaxSize(), topBar = {
-        KmmNewsAPPTopBar(
+        NewsAPPTopBar(
             titleRes = R.string.read_later,
             navigationIcon = {
                 IconButton(onClick = { destinationsNavigator.popBackStack() }) {

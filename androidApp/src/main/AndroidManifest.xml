@@ -9,6 +9,7 @@ package="com.fuh.newsapp.android">
     android:allowBackup="false"
     android:hardwareAccelerated="true"
     android:label="Corent"
+    android:icon="@mipmap/ic_launcher"
     android:largeHeap="true"
     android:requestLegacyExternalStorage="true"
     android:supportsRtl="true"
