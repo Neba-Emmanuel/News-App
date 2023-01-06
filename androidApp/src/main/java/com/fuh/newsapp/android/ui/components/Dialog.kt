@@ -14,7 +14,7 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 
 @Composable
-fun KmmNewsAPPDialog(text: String, dialogState: Boolean, onDismiss: () -> Unit) {
+fun APPDialog(text: String, dialogState: Boolean, onDismiss: () -> Unit) {
     Dialog(
         onDismissRequest = { onDismiss() },
         content = {
