@@ -9,7 +9,7 @@ import androidx.compose.ui.text.font.FontWeight
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun KmmNewsAPPTopBar(
+fun NewsAPPTopBar(
     modifier: Modifier = Modifier,
     @StringRes titleRes: Int,
     navigationIcon: @Composable () -> Unit = {},
