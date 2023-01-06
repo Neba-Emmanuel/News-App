@@ -25,10 +25,10 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import coil.size.Scale
 import com.fuh.newsapp.android.R
-import com.fuh.newsapp.android.ui.components.KmmNewsAPPTopBar
+import com.fuh.newsapp.android.ui.components.NewsAPPTopBar
 import com.fuh.newsapp.android.ui.destinations.NewsDetailsScreenDestination
 import com.fuh.newsapp.android.ui.destinations.ReadLaterScreenDestination
-import com.fuh.newsapp.android.ui.theme.KMMNewsTheme
+import com.fuh.newsapp.android.ui.theme.NewsAppTheme
 import com.fuh.newsapp.domain.domain_model.HeadlineDomainModel
 import com.fuh.newsapp.presentation.home.HomeScreenSideEvent
 import com.fuh.newsapp.presentation.home.HomeScreenState
@@ -57,7 +57,7 @@ fun Home(
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 private fun Home(state: HomeScreenState, destinationsNavigator: DestinationsNavigator) {
     Scaffold(modifier = Modifier.fillMaxSize(), topBar = {
-        KmmNewsAPPTopBar(titleRes = R.string.app_heading, actionIcons = {
+        NewsAPPTopBar(titleRes = R.string.app_heading, actionIcons = {
             IconButton(onClick = { destinationsNavigator.navigate(ReadLaterScreenDestination()) }) {
                 Icon(imageVector = Icons.Default.List, contentDescription = null)
             }
@@ -182,13 +182,13 @@ fun HeadlinesCard(
 @Preview
 @Composable
 fun HomePreview() {
-    KMMNewsTheme {
+    NewsAppTheme {
         HeadlinesCard(headlineDomainModel = HeadlineDomainModel(
-            "Kashif Mehmood",
+            "Neba Emmanuel Fuh",
             "KMM has gone beta and is near to the final release with the new memory model.",
             "KMM hits beta",
-            "12-10-22",
-            "BBC",
+            "06/01/23",
+            "CNN",
             "KMM Is Awesome",
             "https://-",
             "https://=="
