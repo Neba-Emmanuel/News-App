@@ -7,6 +7,7 @@ import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.List
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -43,7 +44,7 @@ import org.koin.androidx.compose.getViewModel
 @Destination
 @Composable
 fun Home(
-    viewModel: HomeScreenViewModel = getViewModel()
+    destinationsNavigator: DestinationsNavigator, viewModel: HomeScreenViewModel = getViewModel()
 ) {
 
     LaunchedEffect(key1 = Unit) {
@@ -59,7 +60,7 @@ private fun Home(state: HomeScreenState, destinationsNavigator: DestinationsNavi
     Scaffold(modifier = Modifier.fillMaxSize(), topBar = {
         NewsAPPTopBar(titleRes = R.string.app_heading, actionIcons = {
             IconButton(onClick = { destinationsNavigator.navigate(ReadLaterScreenDestination()) }) {
-                Icon(imageVector = Icons.Default.List, contentDescription = null)
+                Icon(imageVector = Icons.Default.Favorite, contentDescription = null)
             }
         })
     }) { innerPadding ->
