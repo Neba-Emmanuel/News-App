@@ -43,7 +43,7 @@ import org.koin.androidx.compose.getViewModel
 @Destination
 @Composable
 fun Home(
-    destinationsNavigator: DestinationsNavigator, viewModel: HomeScreenViewModel = getViewModel()
+    viewModel: HomeScreenViewModel = getViewModel()
 ) {
 
     LaunchedEffect(key1 = Unit) {
