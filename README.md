@@ -1,2 +1,2 @@
-# News-App-with-newsapi
- News App made with newsapi.org
+# News-App-with-kmm
+ News App made with Kotlin Multiplatform Mobile (KMM)
