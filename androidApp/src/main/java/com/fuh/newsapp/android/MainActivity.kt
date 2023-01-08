@@ -16,7 +16,6 @@ class MainActivity : ComponentActivity() {
         setContent {
             NewsAppTheme {
 
-                MainScreen()
                DestinationsNavHost(navGraph = NavGraphs.root)
 
             }
