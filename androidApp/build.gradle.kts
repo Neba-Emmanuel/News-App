@@ -75,4 +75,6 @@ dependencies {
     }
 
     implementation(Koin.koinAndroid)
+    implementation ("androidx.navigation:navigation-compose:2.5.3")
+    implementation("androidx.navigation:navigation-compose:2.6.0-alpha04")
 }
