@@ -82,7 +82,6 @@ kotlin {
             dependencies {
                 implementation(Ktor.clientAndroid)
                 implementation(Koin.koinAndroid)
-
             }
         }
         val androidTest by getting
