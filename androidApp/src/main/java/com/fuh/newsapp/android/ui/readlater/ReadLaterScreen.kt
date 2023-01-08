@@ -26,7 +26,7 @@ import org.koin.androidx.compose.getViewModel
 @Destination
 @Composable
 fun ReadLaterScreen(
-    viewModel: ReadLaterViewModel = getViewModel()
+    destinationsNavigator: DestinationsNavigator, viewModel: ReadLaterViewModel = getViewModel()
 ) {
 
 
